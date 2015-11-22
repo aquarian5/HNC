@@ -1,4 +1,4 @@
-def sign_in
+def signed_in?
   !!session[:user_id]
 end
 

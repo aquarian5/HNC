@@ -1,15 +1,21 @@
+    <h2><center> Hackerette News!<center></h2>
+<br>
+    <center><p> Please Edit Your Post Here:</p>
 <div class="container">
-  <form action="/posts/<%=@epost.id%>" method= "post">
+    <br>
+  <form action="/posts/<%=@post.id%>" method= "post">
     <input type="hidden" name="_method" value="put">
       <label>Title:<label>
         <input type="text" name="post[title]" value="<%=@post.title%>"</input>
       <br>
-     <label>Link<label>
-       <input type="text" name="post[url]" value="<%=@post.url"%>"</input>
-      <br>
-     <label>Text<label>
-       <textarea name="post[body]" rows="4" cols="30"><%=@post.body %></textarea>
+        <br>
+
+       <textarea name="post[body]" rows="4" cols="30"><%=@post.body%></textarea>
       <br>
     <input class="btn btn-default"  type="submit" value="Click To Update Post">
+
+    <form action="/posts" method= "post">
+      <input class= "btn btn-default" type="submit" value="Return To Homepage"></input>
+      </form>
    </form>
 </div>

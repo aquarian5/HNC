@@ -1,5 +1,5 @@
 get '/comments' do
-  erb :'/comments/comments'
+  erb :'/comments'
 end
 
 post '/comments/new/post/:id' do
@@ -12,7 +12,7 @@ end
 
 
 get '/posts/:id/comments' do |id|
-  @post = Post.find(id) 
+  @post = Post.find(id)
   @comments= @post.comments.where(post_id: @post.id)
      erb :'/comments/index'
 end
@@ -29,7 +29,7 @@ post '/posts/:id/comments' do  |id|
   @comment = @post.comments.new(params[:comments])
   @comment.user = user_now
   @comments = @post.comments
-  
+
   if @comment.save!
     erb :'/comments/show'
   else

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
-  validates :user, :email, { presence: true }
+  has_secure_password
+
+  validates :username, { presence: true }
       has_many :posts
       has_many :comments
 

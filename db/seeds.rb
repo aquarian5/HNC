@@ -1,8 +1,8 @@
-user_hash = [{user:'courtney', email: 'courtney@yahoo.com', password_hash:'12345'},
-             {user:'beverly', email: 'beverly@yahoo.com', password_hash: '12345'},
-             {user:'arthur', email: 'arthur@yahoo.com', password_hash: '12345'},
-             {user:'lana', email: 'lana@yahoo.com', password_hash: '12345'},
-             {user:'dominique', email: 'dominique@yahoo.com', password_hash: '12345'}]
+user_hash = [{username:'courtney', email: 'courtney@yahoo.com', password:'12345'},
+             {username:'beverly', email: 'beverly@yahoo.com', password: '12345'},
+             {username:'arthur', email: 'arthur@yahoo.com', password: '12345'},
+             {username:'lana', email: 'lana@yahoo.com', password: '12345'},
+             {username:'dominique', email: 'dominique@yahoo.com', password: '12345'}]
 
   User.create!(user_hash)
 

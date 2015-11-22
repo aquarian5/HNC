@@ -1,7 +1,7 @@
 <div class="container">
 
 
-<form action="/posts/<%=@post.id%>" method= "get">
+<form action="/posts<%=@post.id%>" method= "get">
   Title:<br>
   <input type="text" name="post[body]">
   <br>
@@ -13,7 +13,7 @@
   <input type="submit" value="Return To Hacker News">
 </form>
 
-<form action="/posts/<%=@post.id%>/delete" method= "post">
+<form action="/posts/<%=@post.id%>/edit" method= "post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete post">
 </form>

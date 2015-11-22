@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title, { limit: 250, null: false }
       t.text :body, { null: false }
 
+
       t.timestamps(null: false)
     end
   end

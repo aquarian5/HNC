@@ -1,8 +1,10 @@
-<h3><%=post.title%><h3>
-<h2><%=post.body%><h2>
-  <form action= '/posts/<%=post.id%>/edit' method ="get">
+<h3><%=@post.title%><h3>
+<p><%=@post.body%></p>
+  <br>
+  <form action= '/posts/<%=@post.id%>/edit' method ="get">
     <input type="submit" value="edit">
     <br>
-    <form action= '/posts/<%post.id %>' method ="post">
-      <input type="hidden" name="_change" value="delete"
+      <br>
+    <form action= '/posts/<%@post.id %>/edit' method ="get">
+      <input type="submit" value="delete">
   </form>
